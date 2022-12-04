@@ -1,0 +1,46 @@
+Distribution of possible sequence
+
+     35 A X
+    473 A Y
+     76 A Z
+     86 B X
+    197 B Y
+    413 B Z
+    344 C X
+    780 C Y
+     96 C Z
+
+Now; what does each combination imply in points?
+        with   OPPONENT  ME    RESULT    MyPoints
+
+        A X :    Rock  Scissors  LOSE   3 (Scissors) + Lose(0)  = 3
+        A Y :    Rock   Rock     TIE    1 (Rock)     + Tie (3)  = 4
+        A Z :    Rock   Paper    WIN    2 (Paper)    + Win (6)  = 8
+
+        B X :    Paper  Rock     LOSE   1 (Rock)     + Lost(0)  = 1
+        B Y :    Paper  Paper    TIE    2 (Paper)    + Tie (3)  = 5
+        B Z :    Paper Scissors  WIN    3 (Scissors) + Win (6)  = 9
+
+        C X :  Scissors  Paper    LOSE  2 (Paper)    + Win (0)  = 2
+        C Y :  Scissors Scissors  TIE   3 (Scissors) + Tie (3)  = 6
+        C Z :  Scissors  Rock     WIN   1 (Rock)     + Win (6)  = 7
+
+Now, sum it all up:
+
+     35 A X    35 * 3  =     105
+    473 A Y   473 * 4  =   1,892
+     76 A Z    76 * 8  =     608
+
+     86 B X    86 * 1  =      86
+    197 B Y   197 * 5  =     985
+    413 B Z   413 * 9  =   3,717
+
+    344 C X   344 * 2  =     688
+    780 C Y   780 * 6  =   4,680
+     96 C Z    96 * 7  =     672
+
+                          ------
+
+            Grand Total   13,433
+
+
