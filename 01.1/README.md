@@ -1,7 +1,6 @@
-<h1>Day 1 - part 1<h1>
+<h1>Day 1 - part 1</h1>
 
-<p>URL:
-https://adventofcode.com/2022/day/1
+<p>URL: https://adventofcode.com/2022/day/1
 </br>
 
 
@@ -19,24 +18,27 @@ https://adventofcode.com/2022/day/1
 <p>Which means:</p>
 <ol>
 <li>run awk programme.</li>
-<li>ather than taking script as input, read script from file "findMax.awk"</li>
+<li>rather than taking script as input, read script from file "findMax.awk"</li>
 <li>proces input file "input.txt".</li>
 </ol>
 
 <h2>note:</h2>
 <ul>
-<li>Could have done
+<li>Could have done</br>
 <code>
      cat input.txt | awk -f findMax.awk
 </code>
 </li>
-<li>What is Awk?</li>
-<div>AWK (awk) is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Like sed and grep, it is a filter,[4] and is a standard feature of most Unix-like operating systems.</div>
+<li>What is Awk?
+<p>AWK (awk) is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Like sed and grep, it is a filter, and is a standard feature of most Unix-like operating systems.
+<p>AWK was initially developed in 1977 by Alfred Aho (author of egrep), Peter J. Weinberger (who worked on tiny relational databases), and Brian Kernighan. AWK takes its name from their respective initials.
+</li>
 </ul>
 </br>
 
 <h2>findMax.awk explained:</h2>
 <code>
+
         BEGIN {
            total=0;
            max=0;
@@ -69,7 +71,11 @@ https://adventofcode.com/2022/day/1
 <p>i.e. $1, $2, $3 for 1st, 2nd or 3rd argument (separated by white space by default) of each line.
 <p>  -> That's why you have
 <code>
-         total += $0           # i.e. same as total = total + $0
+         total += $0
+</code>
+ <p>i.e. same as
+ <code>
+         total = total + $0
 </code>
 <p>which is add (entire line) to total variable.
 </li>
