@@ -98,21 +98,24 @@
 <p>For example, suppose the Elves finish writing their items' Calories and end up with the following list:
 </br>
 <code>
-1000
-2000
-3000
 
-4000
+  1000
+  2000
+  3000
 
-5000
-6000
+  4000
 
-7000
-8000
-9000
+  5000
+  6000
 
-10000
+  7000
+  8000
+  9000
+
+  10000
+
 </code>
+
 <p> This list represents the Calories of the food carried by five Elves:
 
 </br>
