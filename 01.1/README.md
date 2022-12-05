@@ -10,10 +10,10 @@
 
 <h1>Solution:</h1>
 <p>Run awk script against input.txt:
-<code>
+<pre>
 
    awk -f findMax.awk input.txt
-</code>
+</pre>
 
 <p>Which means:</p>
 <ol>
@@ -25,9 +25,9 @@
 <h2>note:</h2>
 <ul>
 <li>Could have done</br>
-<code>
+<pre>
      cat input.txt | awk -f findMax.awk
-</code>
+</pre>
 </li>
 <li>What is Awk?
 <p>AWK (awk) is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Like sed and grep, it is a filter, and is a standard feature of most Unix-like operating systems.
@@ -37,7 +37,7 @@
 </br>
 
 <h2>findMax.awk explained:</h2>
-<code>
+<pre>
 
         BEGIN {
            total=0;
@@ -63,20 +63,20 @@
         }
 
         END {print "max is ", max; }               # solution: print out the total variable
-</code>
+</pre>
 
 <h2>Notes:</h2>
 <ul>
 <li>In awk, variable do not take $; only the "input arguments" for each line.
 <p>i.e. $1, $2, $3 for 1st, 2nd or 3rd argument (separated by white space by default) of each line.
 <p>  -> That's why you have
-<code>
+<pre>
          total += $0
-</code>
+</pre>
  <p>i.e. same as
- <code>
+ <pre>
          total = total + $0
-</code>
+</pre>
 <p>which is add (entire line) to total variable.
 </li>
 <li>Awk tries to magically convert things... so entire line ($0) can be added and it will try to convert it into an integer. Since our input file has only numbers one each line, it works.
@@ -97,7 +97,7 @@
 <p>The Elves take turns writing down the number of Calories contained by the various meals, snacks, rations, etc. that they've brought with them, one item per line. Each Elf separates their own inventory from the previous Elf's inventory (if any) by a blank line.
 <p>For example, suppose the Elves finish writing their items' Calories and end up with the following list:
 </br>
-<code>
+<pre>
 
   1000
   2000
@@ -114,7 +114,7 @@
 
   10000
 
-</code>
+</pre>
 
 <p> This list represents the Calories of the food carried by five Elves:
 
