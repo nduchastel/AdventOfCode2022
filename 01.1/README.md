@@ -5,14 +5,16 @@ https://adventofcode.com/2022/day/1
 </br>
 
 
-<h1>Summary (by me):<h1>
+<h1>Summary (by me):</h1>
 <p>Giving input of numbers, grouped with empty line to split "values for each elve", count total per elve and return total from elves with maximum total.
 
 
 <h1>Solution:</h1>
 <p>Run awk script against input.txt:
+<code>
 
    awk -f findMax.awk input.txt
+</code>
 
 <p>Which means:</p>
 <ol>
@@ -24,7 +26,9 @@ https://adventofcode.com/2022/day/1
 <h2>note:</h2>
 <ul>
 <li>Could have done
-<div>      cat input.txt | awk -f findMax.awk</div>
+<code>
+     cat input.txt | awk -f findMax.awk
+</code>
 </li>
 <li>What is Awk?</li>
 <div>AWK (awk) is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Like sed and grep, it is a filter,[4] and is a standard feature of most Unix-like operating systems.</div>
@@ -61,15 +65,13 @@ https://adventofcode.com/2022/day/1
 
 <h2>Notes:</h2>
 <ul>
-<li>In awk, variable do not take $; only the "finput arguments" for each line.
-<div>
-   i.e. $1, $2, $3 for 1st, 2nd or 3rd argument (separated by white space by default) of each line.
-   -> That's why you have
+<li>In awk, variable do not take $; only the "input arguments" for each line.
+<p>i.e. $1, $2, $3 for 1st, 2nd or 3rd argument (separated by white space by default) of each line.
+<p>  -> That's why you have
 <code>
          total += $0           # i.e. same as total = total + $0
 </code>
-      which is add (entire line) to total variable.
-</div>
+<p>which is add (entire line) to total variable.
 </li>
 <li>Awk tries to magically convert things... so entire line ($0) can be added and it will try to convert it into an integer. Since our input file has only numbers one each line, it works.
 <p>If we had some text , it probably would end-up being 0.</p>
@@ -81,21 +83,14 @@ https://adventofcode.com/2022/day/1
 
 
 <h1>Detailed Description (from web site):</h1>
-<p>
 <h2> --- Day 1: Calorie Counting ---</h2>
-<p>
-Santa's reindeer typically eat regular reindeer food, but they need a lot of magical energy to deliver presents on Christmas. For that, their favorite snack is a special type of star fruit that only grows deep in the jungle. The Elves have brought you on their annual expedition to the grove where the fruit grows.
-<p>
-To supply enough magical energy, the expedition needs to retrieve a minimum of fifty stars by December 25th. Although the Elves assure you that the grove has plenty of fruit, you decide to grab any fruit you see along the way, just in case.
-<p>
-Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
-<p>
-The jungle must be too overgrown and difficult to navigate in vehicles or access from the air; the Elves' expedition traditionally goes on foot. As your boats approach land, the Elves begin taking inventory of their supplies. One important consideration is food - in particular, the number of Calories each Elf is carrying (your puzzle input).
-<p>
-The Elves take turns writing down the number of Calories contained by the various meals, snacks, rations, etc. that they've brought with them, one item per line. Each Elf separates their own inventory from the previous Elf's inventory (if any) by a blank line.
-<p>
-For example, suppose the Elves finish writing their items' Calories and end up with the following list:
-
+<p>Santa's reindeer typically eat regular reindeer food, but they need a lot of magical energy to deliver presents on Christmas. For that, their favorite snack is a special type of star fruit that only grows deep in the jungle. The Elves have brought you on their annual expedition to the grove where the fruit grows.
+<p>To supply enough magical energy, the expedition needs to retrieve a minimum of fifty stars by December 25th. Although the Elves assure you that the grove has plenty of fruit, you decide to grab any fruit you see along the way, just in case.
+<p>Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
+<p>The jungle must be too overgrown and difficult to navigate in vehicles or access from the air; the Elves' expedition traditionally goes on foot. As your boats approach land, the Elves begin taking inventory of their supplies. One important consideration is food - in particular, the number of Calories each Elf is carrying (your puzzle input).
+<p>The Elves take turns writing down the number of Calories contained by the various meals, snacks, rations, etc. that they've brought with them, one item per line. Each Elf separates their own inventory from the previous Elf's inventory (if any) by a blank line.
+<p>For example, suppose the Elves finish writing their items' Calories and end up with the following list:
+</br>
 <code>
 1000
 2000
